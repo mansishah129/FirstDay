@@ -1,0 +1,21 @@
+Enter Information
+
+
+<% form_for Guest.new do |f|-%>
+Name: <%=f.text_field :name %><br/>
+email: <%=f.text_field :email %><br/>
+mobile: <%=f.text_field :mobile %><br/>
+No of members: <%=f.text_field :mem %><br/>
+<%=f.submit%>
+
+<% end -%>
+<hr>
+
+All member information
+
+<% if !@guests.blank?%>
+	<%for item in @guests %>
+	<%=item.name%><br>
+	<% end -%>
+	<% else%>
+	<% end -%>
